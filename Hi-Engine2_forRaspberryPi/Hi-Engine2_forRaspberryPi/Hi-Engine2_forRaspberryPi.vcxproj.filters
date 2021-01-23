@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ProjectSetting.cpp" />
+    <ClCompile Include="Engine\src\BasicScene.cpp">
+      <Filter>Engine\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\EngineManager.cpp">
+      <Filter>Engine\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\Input.cpp">
+      <Filter>Engine\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\IORaspberryPi.cpp">
+      <Filter>Engine\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\Map.cpp">
+      <Filter>Engine\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\Object.cpp">
+      <Filter>Engine\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\SceneManager.cpp">
+      <Filter>Engine\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\Time.cpp">
+      <Filter>Engine\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\Tools.cpp">
+      <Filter>Engine\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\Unit.cpp">
+      <Filter>Engine\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\WorldOutliner.cpp">
+      <Filter>Engine\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\Player.cpp">
+      <Filter>User\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\TestScene.cpp">
+      <Filter>User\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\Wall.cpp">
+      <Filter>User\Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{f36560fa-d2b1-4ce9-b722-89cb22cad370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User">
+      <UniqueIdentifier>{41b02adc-5490-4f72-9e3c-fa11305875a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Include">
+      <UniqueIdentifier>{843a3d19-977c-4846-ab2d-ffacfd7f4bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Src">
+      <UniqueIdentifier>{a377c7ef-cfb8-4d7c-9352-5f3101ea37f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User\Include">
+      <UniqueIdentifier>{5e29d77f-f46c-4d1c-a3f1-53fcc753cb4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User\Src">
+      <UniqueIdentifier>{b193849b-3e69-42a8-a4b1-6d6cddb4e106}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ProjectSetting.h" />
+    <ClInclude Include="Engine\include\BasicScene.h">
+      <Filter>Engine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\EngineManager.h">
+      <Filter>Engine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\Input.h">
+      <Filter>Engine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\IORaspberryPi.h">
+      <Filter>Engine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\Map.h">
+      <Filter>Engine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\Object.h">
+      <Filter>Engine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\SceneManager.h">
+      <Filter>Engine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\Time.h">
+      <Filter>Engine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\Tools.h">
+      <Filter>Engine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\Unit.h">
+      <Filter>Engine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\WorldOutliner.h">
+      <Filter>Engine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="User\include\Player.h">
+      <Filter>User\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="User\include\TestScene.h">
+      <Filter>User\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="User\include\Wall.h">
+      <Filter>User\Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
