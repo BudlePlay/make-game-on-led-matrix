@@ -12,10 +12,10 @@ BasicScene::BasicScene(): SceneManager()
 
 void BasicScene::Create()
 {
-	worldOutliner.AddObject(new Wall(FPosition({ 0, 0 }), "Wall_Top", "a", Area({ Size, 1 }), "Wall"));
-	worldOutliner.AddObject(new Wall(FPosition({ 0, 0 }), "Wall_Left", "a", Area({ 1, Size }), "Wall"));
-	worldOutliner.AddObject(new Wall(FPosition({ (float)Size - 1, 0 }), "Wall_Right", "a", Area({ 1, Size }), "Wall"));
-	worldOutliner.AddObject(new Wall(FPosition({ 0, (float)Size - 1 }), "Wall_Bottom", "a", Area({ Size, 1 }), "Wall"));
+	WorldOutliner::AddObject(new Wall(FPosition({ 0, 0 }), "Wall_Top", "бс", Area({ Size, 1 }), "Wall"));
+	WorldOutliner::AddObject(new Wall(FPosition({ 0, 0 }), "Wall_Left", "бс", Area({ 1, Size }), "Wall"));
+	WorldOutliner::AddObject(new Wall(FPosition({ float(Size) - 1, 0 }), "Wall_Right", "бс", Area({ 1, Size }), "Wall"));
+	WorldOutliner::AddObject(new Wall(FPosition({ 0, float(Size) - 1 }), "Wall_Bottom", "бс", Area({ Size, 1 }), "Wall"));
 
 }
 

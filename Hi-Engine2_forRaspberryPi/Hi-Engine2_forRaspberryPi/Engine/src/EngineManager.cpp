@@ -4,14 +4,12 @@
 #include <iomanip>
 #include <string>
 
-#include "../include/Tools.h"
 
 
 EngineManager::EngineManager()
 {
 	led_matrix_ = new IORaspberryPi();
 	this->scene = new TestScene();
-	
 	Game();
 }
 
@@ -42,7 +40,6 @@ void EngineManager::Game()
 
 		if (scene->nextScene)		//nextScene is not null
 		{
-			system("cls");
 			WorldOutliner::AllDestroy();
 			this->scene = scene->nextScene;
 			scene->Create();
@@ -54,9 +51,9 @@ void EngineManager::Game()
 
 void EngineManager::BoomCheck()
 {
-	for (auto my : scene->worldOutliner.GetObjects())
+	for (auto my : WorldOutliner::GetObjects())
 	{
-		for (auto other : scene->worldOutliner.GetObjects())
+		for (auto other : WorldOutliner::GetObjects())
 		{
 			if (my != other)
 			{
@@ -81,7 +78,7 @@ void EngineManager::BoomCheck()
 void EngineManager::Work()
 {
 	//Work
-	for (auto o : scene->worldOutliner.GetObjects())
+	for (auto o : WorldOutliner::GetObjects())
 	{
 		o->Work();
 	}
@@ -89,14 +86,12 @@ void EngineManager::Work()
 
 void EngineManager::Print_Map()
 {
-	scene->SceneManager::UploadMap(scene->worldOutliner.GetObjects());
+	scene->SceneManager::UploadMap(WorldOutliner::GetObjects());
 
 	std::vector<Position> v = scene->mapPointer->ModifiedMap();
 	for (Position i : v)
 	{
-		std::cout << scene->mapPointer->GetPartOfMap({ i.x, i.y }) << std::endl;
 	}
-	Tools::backCersor();
 	
 	led_matrix_->refresh();
 }

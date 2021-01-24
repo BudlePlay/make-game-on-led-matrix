@@ -21,5 +21,5 @@ public:
 	
 	static void Destroy(Object* object);
 
-	std::vector<Object*> GetObjects();
+	static std::vector<Object*> GetObjects();
 };

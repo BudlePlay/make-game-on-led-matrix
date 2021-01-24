@@ -12,8 +12,9 @@ protected:
 	std::string Type;
 	FPosition position{0,0};
 	Area area{0,0};
-	std::string Direction;
+
 	
+protected:
 	float Speed = 0.2;
 	FPosition Up = { 0, Speed };
 	FPosition Down = { 0, -Speed };
@@ -21,8 +22,9 @@ protected:
 	FPosition Right = { Speed, 0 };
 	
 public:
-	
-	Object(FPosition p, std::string name, std::string shape, Area Area, std::string direction, std::string Type);
+	virtual ~Object();
+
+	Object(FPosition p, std::string name, std::string shape, Area Area, std::string Type);
 
 
 	std::string GetName();
@@ -37,10 +39,6 @@ public:
 
 	void SetShape(std::string shape);
 
-	std::string getDirection();
-
-	void setDirection(std::string D);
-
 	std::string getType();
 
 	void setType(std::string t);
@@ -53,6 +51,8 @@ public:
 	void TryWork();
 
 	Area GetArea();
+	void SetArea(const Area& area);
+
 	virtual void Work();
 	virtual void OnCollision(Object* other);
 };

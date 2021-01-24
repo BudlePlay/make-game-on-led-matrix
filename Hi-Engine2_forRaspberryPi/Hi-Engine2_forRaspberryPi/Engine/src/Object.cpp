@@ -1,11 +1,18 @@
 #include "../include/Object.h"
 
 
-Object::Object(FPosition p, std::string name, std::string shape, Area Area, std::string direction, std::string Type)
+
+Object::~Object()
+{
+	name.clear();
+	shape.clear();
+	Type.clear();
+}
+
+Object::Object(FPosition p, std::string name, std::string shape, Area Area, std::string Type)
 {
 	this->name = name;
 	this->shape = shape;
-	this->Direction = direction;
 
 	this->position.x = p.x;
 	this->position.y = p.y;
@@ -46,15 +53,6 @@ void Object::SetShape(std::string shape)
 	this->shape = shape;
 }
 
-std::string Object::getDirection()
-{
-	return Direction;
-}
-
-void Object::setDirection(std::string D)
-{
-	this->Direction = D;
-}
 
 std::string Object::getType()
 {
@@ -89,6 +87,11 @@ void Object::TryWork()
 Area Object::GetArea()
 {
 	return area;
+}
+
+void Object::SetArea(const Area& area)
+{
+	this->area = area;
 }
 
 void Object::Work()

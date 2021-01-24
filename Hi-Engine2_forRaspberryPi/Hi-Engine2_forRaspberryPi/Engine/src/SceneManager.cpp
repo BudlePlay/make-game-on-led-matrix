@@ -1,9 +1,9 @@
 #include "../include/SceneManager.h"
 
+SceneManager* SceneManager::nextScene = nullptr;
+
 SceneManager::SceneManager()
 {
-	worldOutliner = WorldOutliner();
-	nextScene = nullptr;
 }
 
 void SceneManager::Create()
@@ -49,10 +49,7 @@ void SceneManager::UploadMap(std::vector<Object*> obs)
 	}
 }
 
-WorldOutliner SceneManager::getWorldOutliner()
-{
-	return worldOutliner;
-}
+
 
 void SceneManager::SceneChange(SceneManager* scene)
 {

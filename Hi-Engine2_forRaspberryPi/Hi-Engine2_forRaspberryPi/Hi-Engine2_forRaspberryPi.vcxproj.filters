@@ -45,6 +45,18 @@
     <ClCompile Include="User\src\Wall.cpp">
       <Filter>User\Src</Filter>
     </ClCompile>
+    <ClCompile Include="User\src\Bullet.cpp">
+      <Filter>User\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\Enemy.cpp">
+      <Filter>User\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\EnemySpawner.cpp">
+      <Filter>User\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\HpBar.cpp">
+      <Filter>User\Src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -108,6 +120,18 @@
       <Filter>User\Include</Filter>
     </ClInclude>
     <ClInclude Include="User\include\Wall.h">
+      <Filter>User\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="User\include\Bullet.h">
+      <Filter>User\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="User\include\Enemy.h">
+      <Filter>User\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="User\include\EnemySpawner.h">
+      <Filter>User\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="User\include\HpBar.h">
       <Filter>User\Include</Filter>
     </ClInclude>
   </ItemGroup>

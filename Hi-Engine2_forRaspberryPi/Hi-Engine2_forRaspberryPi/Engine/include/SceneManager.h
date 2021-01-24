@@ -4,15 +4,16 @@
 #include "Object.h"
 #include "Map.h"
 
+#include "Tools.h"
 #include "WorldOutliner.h"
 #include <vector>
+#include "Unit.h"
 
 class SceneManager
 {
 protected:
 public:
-	SceneManager* nextScene;
-	WorldOutliner worldOutliner;
+	static SceneManager* nextScene;
 	Map* mapPointer;
 
 	int X_SIZE = 0;
@@ -30,7 +31,6 @@ public:
 
 	void UploadMap(std::vector<Object*> obs);
 
-	WorldOutliner getWorldOutliner();
 
 	void SceneChange(SceneManager* scene);
 };

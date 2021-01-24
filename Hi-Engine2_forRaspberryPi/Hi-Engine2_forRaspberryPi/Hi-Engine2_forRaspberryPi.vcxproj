@@ -78,6 +78,10 @@
     <ClCompile Include="Engine\src\WorldOutliner.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ProjectSetting.cpp" />
+    <ClCompile Include="User\src\Bullet.cpp" />
+    <ClCompile Include="User\src\Enemy.cpp" />
+    <ClCompile Include="User\src\EnemySpawner.cpp" />
+    <ClCompile Include="User\src\HpBar.cpp" />
     <ClCompile Include="User\src\Player.cpp" />
     <ClCompile Include="User\src\TestScene.cpp" />
     <ClCompile Include="User\src\Wall.cpp" />
@@ -95,6 +99,10 @@
     <ClInclude Include="Engine\include\Unit.h" />
     <ClInclude Include="Engine\include\WorldOutliner.h" />
     <ClInclude Include="ProjectSetting.h" />
+    <ClInclude Include="User\include\Bullet.h" />
+    <ClInclude Include="User\include\Enemy.h" />
+    <ClInclude Include="User\include\EnemySpawner.h" />
+    <ClInclude Include="User\include\HpBar.h" />
     <ClInclude Include="User\include\Player.h" />
     <ClInclude Include="User\include\TestScene.h" />
     <ClInclude Include="User\include\Wall.h" />

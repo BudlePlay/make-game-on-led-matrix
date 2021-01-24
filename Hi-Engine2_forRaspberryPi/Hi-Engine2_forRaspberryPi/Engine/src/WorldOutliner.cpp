@@ -47,6 +47,7 @@ void WorldOutliner::Destroy(Object* object)
 			iter++;
 		}
 	}
+	delete object;
 }
 
 std::vector<Object*> WorldOutliner::GetObjects()
