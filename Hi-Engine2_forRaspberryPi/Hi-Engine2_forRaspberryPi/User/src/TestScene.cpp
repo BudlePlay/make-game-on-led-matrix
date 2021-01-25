@@ -18,7 +18,7 @@ void TestScene::Create()
 	Map_Make();
 
 	WorldOutliner::AddObject(new Player({ 1,1 }, "Player", "aa", { 1,1 }, "Character"));
-	WorldOutliner::AddObject(new EnemySpawner({ 30,5 }, "Spawner", "", { 1,1 }, "Actor"));
+	WorldOutliner::AddObject(new EnemySpawner({ 30,5 }, "Spawner", "  ", { 1,1 }, "Actor"));
 
 }
 

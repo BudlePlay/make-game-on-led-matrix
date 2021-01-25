@@ -10,11 +10,11 @@ public:
 	{
 		std::map<int, std::string> m;
 
-		m['w'] = "Up";
-		m['s'] = "Down";
-		m['a'] = "Left";
-		m['d'] = "Right";
-		m[' '] = "Attack";
+		m[0] = "Up";
+		m[1] = "Down";
+		m[2] = "Left";
+		m[3] = "Right";
+		m[10] = "Attack";
 		return m;
 	}
 

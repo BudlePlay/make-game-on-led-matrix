@@ -76,19 +76,19 @@ void Player::control(PLAYER_INPUT player_input_)
 	
 	if (player_input_ == UP)
 	{
-		Translate({ 0,-1 });
+		Translate({ 0,-0.5f });
 	}
 	else if (player_input_ == DOWN)
 	{
-		Translate({ 0,1 });
+		Translate({ 0,0.5f });
 	}
 	else if (player_input_ == LEFT)
 	{
-		Translate({ -1,0 });
+		Translate({ -0.5f,0 });
 	}
 	else if (player_input_ == RIGHT)
 	{
-		Translate({ 1,0 });
+		Translate({ 0.5f,0 });
 	}
 }
 

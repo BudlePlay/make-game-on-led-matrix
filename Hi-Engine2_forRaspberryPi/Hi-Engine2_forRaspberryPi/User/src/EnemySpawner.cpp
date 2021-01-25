@@ -22,7 +22,7 @@ void EnemySpawner::Work()
 	float y = float(random_int_.roll());
 	if(uptimer_ > spawntime_)
 	{
-		WorldOutliner::AddObject(new Enemy({ x,y}, "Enemy", "ee", { 1,1 }, "Character"));
+		WorldOutliner::AddObject(new Enemy({ x,y}, "Enemy", "enemy", { 1,1 }, "Character"));
 		uptimer_ = 0;
 		
 		enemy_y_++;

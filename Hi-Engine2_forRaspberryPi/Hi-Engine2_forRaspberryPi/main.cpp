@@ -5,7 +5,6 @@
 
 int main(void)
 {
-	wiringPiSetupSys();
 
 	auto engine_manager = new EngineManager(new TestScene());
 	

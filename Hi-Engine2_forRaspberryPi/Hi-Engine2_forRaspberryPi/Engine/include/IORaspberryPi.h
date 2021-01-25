@@ -1,4 +1,5 @@
 #pragma once
+//g++ -o test test.cpp -lwiringPi -lwiringPiDev
 
 
 #define R1 17
@@ -42,7 +43,7 @@ class IORaspberryPi
 {
 public:
 
-	
+
     unsigned char screen[16][32];
 
     IORaspberryPi();
