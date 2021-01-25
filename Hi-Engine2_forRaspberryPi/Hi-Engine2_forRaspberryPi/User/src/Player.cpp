@@ -41,7 +41,7 @@ Player::Player(const FPosition& p, const std::string& name, const std::string& s
 
 	attack_cnt_ = 0;
 
-	hp_bar_ = new HpBar({ 1,0 }, "HpBar", "hp", { 10,1 }, "Widget");
+	hp_bar_ = new HpBar({ 1,0 }, "HpBar", "HpBar", { 10,1 }, "Widget");
 	WorldOutliner::AddObject(hp_bar_);
 
 	hp_ = 10;
@@ -107,7 +107,7 @@ void Player::attack()
 	attack_cnt_++;
 
 	FPosition pos = GetPosition() + FPosition(1, 0);
-	WorldOutliner::AddObject(new Bullet(pos, "bullet", "bt", { 1,1 }, "", "bullet", {1,0}, 0.1f, this));
+	WorldOutliner::AddObject(new Bullet(pos, "Bullet", "Bullet", { 1,1 }, "", "bullet", {1,0}, 0.1f, this));
 
 	hp_--;
 	hp_bar_->SetArea({ hp_,1 });

@@ -7,6 +7,7 @@
 
 Input::Input()
 {
+	flip = true;
 }
 
 void Input::BindAction(std::string name, EInputEvent KeyEvent, Object* object, const std::function<void()>& func)
@@ -16,7 +17,7 @@ void Input::BindAction(std::string name, EInputEvent KeyEvent, Object* object, c
 	this->func_ = func;
 }
 
-void Input::operator()() const
+void Input::operator()()
 {
 	int joy = IORaspberryPi::get_joy();
 
@@ -25,7 +26,7 @@ void Input::operator()() const
 		const int pressed_key = joy;
 		const auto input_setting = InputSetting::Action_map.find(pressed_key);
 
-		if(input_setting != InputSetting::Action_map.end())
+		if (input_setting != InputSetting::Action_map.end())
 		{
 			const auto action_name_setting = input_setting->second;
 			const auto input = input_map_.find(action_name_setting);
@@ -34,11 +35,11 @@ void Input::operator()() const
 			{
 				input->second();
 			}
-		}	
+		}
 	}
 
 	int btn = IORaspberryPi::get_btn(0);
-	if (btn != 0)
+	if (btn == 1 && flip == true)
 	{
 		const auto input_setting = InputSetting::Action_map.find(10);
 
@@ -52,6 +53,11 @@ void Input::operator()() const
 				input->second();
 			}
 		}
+		flip = false;
+	}
+	else if(btn == 0)
+	{
+		flip = true;
 	}
 	
 }

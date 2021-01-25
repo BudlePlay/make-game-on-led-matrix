@@ -20,10 +20,12 @@ public:
 	Input();
 
 	void BindAction(std::string name, EInputEvent KeyEvent, Object* object, const std::function<void()>& func);
-	void operator()() const;
+	void operator()();
 
 	std::map<std::string, std::function<void()>> input_map_;
 private:
+
+	bool flip;
 	Object* object_;
 	std::function<void()> func_;
 	

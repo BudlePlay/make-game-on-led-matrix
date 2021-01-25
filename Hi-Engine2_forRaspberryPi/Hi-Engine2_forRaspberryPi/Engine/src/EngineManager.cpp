@@ -109,6 +109,14 @@ void EngineManager::Print_Map()
 			{
 				color_ = WHITE;
 			}
+			else if (shape.compare("HpBar") == 0)
+			{
+				color_ = RED;
+			}
+			else if (shape.compare("Enemy") == 0)
+			{
+				color_ = YELLOW;
+			}
 		}
 
 		if (i.x < 32 && i.y < 16)
