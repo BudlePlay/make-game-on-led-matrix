@@ -124,7 +124,6 @@ void EngineManager::Print_Map()
 			led_matrix_->set_pixel(i.x, i.y, color_);
 		}
 
-		std::cout << i.x << i.y << std::endl;
 	}
 
 

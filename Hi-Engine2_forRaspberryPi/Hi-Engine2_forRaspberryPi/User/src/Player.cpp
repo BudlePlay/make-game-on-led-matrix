@@ -68,27 +68,30 @@ void Player::OnCollision(Object* other)
 void Player::up_hp(int increase)
 {
 	hp_ += increase;
+	hp_bar_->SetArea({ hp_,1 });
 }
 
 void Player::control(PLAYER_INPUT player_input_)
 {
 	prev_position_ = position;
-	
+
+	const auto speed = 0.25f;
+
 	if (player_input_ == UP)
 	{
-		Translate({ 0,-0.5f });
+		Translate({ 0,-1 * speed });
 	}
 	else if (player_input_ == DOWN)
 	{
-		Translate({ 0,0.5f });
+		Translate({ 0,speed });
 	}
 	else if (player_input_ == LEFT)
 	{
-		Translate({ -0.5f,0 });
+		Translate({ -1 * speed,0 });
 	}
 	else if (player_input_ == RIGHT)
 	{
-		Translate({ 0.5f,0 });
+		Translate({ speed  ,0 });
 	}
 }
 
