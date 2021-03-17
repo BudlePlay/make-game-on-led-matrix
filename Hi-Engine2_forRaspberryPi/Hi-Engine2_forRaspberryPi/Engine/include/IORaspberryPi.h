@@ -1,31 +1,30 @@
 #pragma once
 //g++ -o test test.cpp -lwiringPi -lwiringPiDev
 
-
-#define R1 17
-#define R2 23
-#define G1 18
-#define G2 24
-#define B1 22
-#define B2 25
+#define R1 21
+#define R2 16
+#define G1 26
+#define G2 19
+#define B1 20
+#define B2 12
 
 #define A 7
-#define B 8
-#define C 9
+#define B 15
+#define C 8
 
-#define CLK 3
-#define LATCH 4
-#define OE 2
+#define CLK 25
+#define LATCH 18
+#define OE 24
 
-#define JOY_UP 13
-#define JOY_DOWN 6
-#define JOY_LEFT 19
-#define JOY_RIGHT 26
+#define JOY_UP 9
+#define JOY_DOWN 10
+#define JOY_LEFT 27
+#define JOY_RIGHT 22
 
-#define BTN_0 16
-#define BTN_1 999
-#define BTN_2 999
-#define BTN_3 999
+#define BTN_0 2
+#define BTN_1 3
+#define BTN_2 4
+#define BTN_3 17
 
 enum COLOR
 {
