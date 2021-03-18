@@ -14,7 +14,7 @@ Enemy::~Enemy()
 
 void Enemy::Work()
 {
-	Translate({ -0.01f,0.f });
+	Translate({ -0.001f,0.f });
 }
 
 void Enemy::OnCollision(Object* other)

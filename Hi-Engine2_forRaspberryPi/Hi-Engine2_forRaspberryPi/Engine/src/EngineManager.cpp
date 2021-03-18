@@ -44,6 +44,11 @@ void EngineManager::Game()
 			this->scene = scene->nextScene;
 			scene->Create();
 			scene->nextScene = nullptr;
+
+			for (int i = 0; i < 32; i++)
+				for (int j = 0; j < 16; j++)
+					led_matrix_->set_pixel(i, j, BLACK);
+
 			scene->mapPointer->Print();
 		}
 	}

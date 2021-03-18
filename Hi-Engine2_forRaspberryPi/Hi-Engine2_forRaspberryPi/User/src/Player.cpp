@@ -4,7 +4,7 @@
 #include "../../Engine/include/IORaspberryPi.h"
 #include "../../Engine/include/Unit.h"
 
-
+#include<math.h>
 
 
 #include "../../Engine/include/BasicScene.h"
@@ -44,7 +44,7 @@ Player::Player(const FPosition& p, const std::string& name, const std::string& s
 	hp_bar_ = new HpBar({ 1,0 }, "HpBar", "HpBar", { 10,1 }, "Widget");
 	WorldOutliner::AddObject(hp_bar_);
 
-	hp_ = 10;
+	hp_ = 0;
 }
 
 void Player::Work()
@@ -53,9 +53,9 @@ void Player::Work()
 	int data = IORaspberryPi::get_joy();
 	int pressed_key;
 
-	if(hp_> 15)
+	if(hp_> 30)
 	{
-		SceneManager::nextScene = new BasicScene();
+		SceneManager::nextScene = new TestScene();
 	}
 
 }
@@ -75,7 +75,7 @@ void Player::control(PLAYER_INPUT player_input_)
 {
 	prev_position_ = position;
 
-	const auto speed = 0.25f;
+	const auto speed = 0.05f;
 
 	if (player_input_ == UP)
 	{
@@ -110,9 +110,14 @@ void Player::attack()
 	attack_cnt_++;
 
 	FPosition pos = GetPosition() + FPosition(1, 0);
-	WorldOutliner::AddObject(new Bullet(pos, "Bullet", "Bullet", { 1,1 }, "", "bullet", {1,0}, 0.1f, this));
-
+	WorldOutliner::AddObject(new Bullet(pos, "Bullet", "Bullet", { 1,1 }, "", "bullet", {1,0}, 0.03f, this));
+	
+	
 	hp_--;
+	if (hp_ < 0)
+	{
+		hp_ = 0;
+	}
 	hp_bar_->SetArea({ hp_,1 });
 }
 

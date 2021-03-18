@@ -15,7 +15,7 @@ protected:
 
 	
 protected:
-	float Speed = 0.2;
+	float Speed = 0.2f;
 	FPosition Up = { 0, Speed };
 	FPosition Down = { 0, -Speed };
 	FPosition Left = { -Speed, 0 };

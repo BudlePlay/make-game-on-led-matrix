@@ -12,7 +12,7 @@
 #define B 15
 #define C 8
 
-#define CLK 25
+#define CLK 25                                                                          
 #define LATCH 18
 #define OE 24
 
