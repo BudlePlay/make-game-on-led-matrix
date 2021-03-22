@@ -57,14 +57,14 @@ IORaspberryPi::IORaspberryPi()
 void IORaspberryPi::clk()
 {
 	digitalWrite(CLK, 1);
-	//delayMicroseconds(100);
+	delayMicroseconds(10);
 	digitalWrite(CLK, 0);
 }
 
 void IORaspberryPi::latch()
 {
 	digitalWrite(LATCH, 1);
-	//delayMicroseconds(100);
+	delayMicroseconds(10);
 	digitalWrite(LATCH, 0);
 }
 
@@ -111,8 +111,7 @@ void IORaspberryPi::refresh()
 		}
 		latch();
 		digitalWrite(OE, 0);
-		//delay(1);
-		delayMicroseconds(50);
+		delay(1);
 	}
 }
 

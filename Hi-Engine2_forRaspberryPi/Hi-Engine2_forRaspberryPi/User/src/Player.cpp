@@ -75,7 +75,7 @@ void Player::control(PLAYER_INPUT player_input_)
 {
 	prev_position_ = position;
 
-	const auto speed = 0.05f;
+	const auto speed = 0.15f;
 
 	if (player_input_ == UP)
 	{
@@ -110,7 +110,7 @@ void Player::attack()
 	attack_cnt_++;
 
 	FPosition pos = GetPosition() + FPosition(1, 0);
-	WorldOutliner::AddObject(new Bullet(pos, "Bullet", "Bullet", { 1,1 }, "", "bullet", {1,0}, 0.03f, this));
+	WorldOutliner::AddObject(new Bullet(pos, "Bullet", "Bullet", { 1,1 }, "", "bullet", {1,0}, 0.1f, this));
 	
 	
 	hp_--;
