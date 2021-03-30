@@ -6,6 +6,10 @@
 ![DemoGame](imgs/DemoGame.gif)
 
 ## Case
+![Complete](imgs/Complete.gif)  
+<img src="imgs/Complete.jpg" height="400">  
+
+
 ![AssembleCase](imgs/AssembleCase.gif)
 
 <img src="imgs/MatrixCaseFront.jpg" height="400">
