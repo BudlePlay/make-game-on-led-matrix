@@ -15,7 +15,7 @@ Hi-Engine2 를 기반으로 만든 LED 게임기
 - Raspberry Pi 4
 - Fusion 360
 - 3d Printer
-- Laser cutting machine (도면만 제작)
+- Laser cutting machine
 
 ## Case
 
@@ -23,7 +23,24 @@ Hi-Engine2 를 기반으로 만든 LED 게임기
 
 <img src="imgs/MatrixCaseFront.jpg" height="400">  
 <img src="imgs/MatrixCaseBack.jpg" height="400">  
+<img src="imgs/01_Lower.jpg" height="400">  
+<img src="imgs/02_02_Lower.jpg" height="400">  
 
+## SW Pull up Setting
+```sh
+git clone https://github.com/WiringPi/WiringPi.git
+cd WiringPi/
+./build
+raspi-gpio set 9 pu
+raspi-gpio set 10 pu
+raspi-gpio set 27 pu
+raspi-gpio set 22 pu
+raspi-gpio set 2 pu
+raspi-gpio set 3 pu
+raspi-gpio set 4 pu
+raspi-gpio set 17 pu 
+sudo gpio readall
+```
 
 ## Reference
 [HiEngine2](https://github.com/BudlePlay/Hi-Engine2)
