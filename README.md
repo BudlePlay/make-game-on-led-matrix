@@ -24,7 +24,7 @@ Hi-Engine2 를 기반으로 만든 LED 게임기
 <img src="imgs/MatrixCaseFront.jpg" height="400">  
 <img src="imgs/MatrixCaseBack.jpg" height="400">  
 <img src="imgs/01_Lower.jpg" height="400">  
-<img src="imgs/02_02_Lower.jpg" height="400">  
+<img src="imgs/02_Lower.jpg" height="400">  
 
 ## SW Pull up Setting
 ```sh
