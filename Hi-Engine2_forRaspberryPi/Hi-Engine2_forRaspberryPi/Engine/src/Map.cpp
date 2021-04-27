@@ -59,11 +59,14 @@ std::vector<Position> Map::ModifiedMap()
 	{
 		for (int x = 0; x < XSIZE; x++)
 		{
-			if (currentMap->at(y).at(x) != lastMap->at(y).at(x))
-				positions.push_back({x, y});
+			
+			if (currentColor->at(y).at(x) != lastColor->at(y).at(x))
+				positions.push_back({ x, y });
+
 		}
 	}
 
+	
 	return positions;
 }
 

@@ -43,6 +43,8 @@ void SceneManager::UploadMap(std::vector<Object*> obs)
 		try
 		{
 			mapPointer->SetPartOfMap(PositionTools::FPtoIP(o->GetPosition()), o->GetShape(), o->GetArea());
+			mapPointer->SetPartOfColor(PositionTools::FPtoIP(o->GetPosition()), o->color, o->GetArea());
+
 		}
 		catch (std::exception e)
 		{

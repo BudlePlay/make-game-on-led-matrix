@@ -98,35 +98,11 @@ void EngineManager::Print_Map()
 	for (Position i : v)
 	{
 		std::string shape = scene->mapPointer->GetPartOfMap({ i.x, i.y });
-
-		int comparestr = shape.compare("  ");
-
-		COLOR color_ = BLACK;
-		if (comparestr == 0)
-		{
-			color_ = BLACK;
-		}
-		else
-		{
-			color_ = TURQUOISE;
-
-			if (shape.compare("R") == 0)
-			{
-				color_ = WHITE;
-			}
-			else if (shape.compare("G") == 0)
-			{
-				color_ = RED;
-			}
-			else if (shape.compare("Y") == 0)
-			{
-				color_ = YELLOW;
-			}
-		}
+		const COLOR color = scene->mapPointer->GetPartOfColor({ i.x, i.y });
 
 		if (i.x < 32 && i.y < 16)
 		{
-			led_matrix_->set_pixel(i.x, i.y, color_);
+			led_matrix_->set_pixel(i.x, i.y, color);
 		}
 
 	}
