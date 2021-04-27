@@ -110,15 +110,15 @@ void EngineManager::Print_Map()
 		{
 			color_ = TURQUOISE;
 
-			if (shape.compare("aa") == 0)
+			if (shape.compare("R") == 0)
 			{
 				color_ = WHITE;
 			}
-			else if (shape.compare("HpBar") == 0)
+			else if (shape.compare("G") == 0)
 			{
 				color_ = RED;
 			}
-			else if (shape.compare("Enemy") == 0)
+			else if (shape.compare("Y") == 0)
 			{
 				color_ = YELLOW;
 			}

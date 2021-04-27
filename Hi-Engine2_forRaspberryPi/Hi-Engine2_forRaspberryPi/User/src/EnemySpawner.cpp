@@ -5,7 +5,7 @@
 
 #include <random>
 EnemySpawner::EnemySpawner(const FPosition& p, const std::string& name, const std::string& shape, const Area& Area,
-                           const std::string& Type): Object(p, name, shape, Area, Type), random_int_(10)
+                           const std::string& Type): Object(p, name, shape, BLACK, Area, Type), random_int_(10)
 {
 }
 

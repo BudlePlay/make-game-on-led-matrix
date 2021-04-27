@@ -13,7 +13,7 @@
 #include "../include/Bullet.h"
 #include "../include/TestScene.h"
 
-Player::Player(const FPosition& p, const std::string& name, const std::string& shape, const Area& Area, const std::string& Type): Object(p, name, shape, Area, Type)
+Player::Player(const FPosition& p, const std::string& name, const std::string& shape, const Area& Area, const std::string& Type): Object(p, name, shape, WHITE, Area, Type)
 {
 	input_ = new Input();
 	
@@ -110,7 +110,7 @@ void Player::attack()
 	attack_cnt_++;
 
 	FPosition pos = GetPosition() + FPosition(1, 0);
-	WorldOutliner::AddObject(new Bullet(pos, "Bullet", "Bullet", { 1,1 }, "", "bullet", {1,0}, 0.1f, this));
+	WorldOutliner::AddObject(new Bullet(pos, "Bullet", "Bullet", RED,{ 1,1 }, "", "bullet", {1,0}, 0.1f, this));
 	
 	
 	hp_--;

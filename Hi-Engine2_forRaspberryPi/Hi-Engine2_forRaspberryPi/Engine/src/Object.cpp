@@ -9,11 +9,11 @@ Object::~Object()
 	Type.clear();
 }
 
-Object::Object(FPosition p, std::string name, std::string shape, Area Area, std::string Type)
+Object::Object(FPosition p, std::string name, std::string shape, COLOR color, Area Area, std::string Type)
 {
 	this->name = name;
 	this->shape = shape;
-
+	this->color = color;
 	this->position.x = p.x;
 	this->position.y = p.y;
 	this->area.width = Area.width;

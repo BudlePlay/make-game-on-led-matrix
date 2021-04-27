@@ -26,17 +26,7 @@
 #define BTN_2 4
 #define BTN_3 17
 
-enum COLOR
-{
-    BLACK = 0,
-    RED,
-    GREEN,
-    YELLOW,
-    BLUE,
-    PURPLE,
-    TURQUOISE,
-    WHITE
-};
+#include "../../ProjectSetting.h"
 
 class IORaspberryPi
 {

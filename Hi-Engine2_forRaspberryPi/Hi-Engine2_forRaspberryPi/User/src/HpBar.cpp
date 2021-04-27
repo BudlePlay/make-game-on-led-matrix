@@ -1,7 +1,7 @@
 #include "../include/HpBar.h"
 
 HpBar::HpBar(const FPosition& p, const std::string& name, const std::string& shape, const Area& Area,
-             const std::string& Type): Object(p, name, shape, Area, Type)
+             const std::string& Type): Object(p, name, shape, RED, Area, Type)
 {
 	
 }

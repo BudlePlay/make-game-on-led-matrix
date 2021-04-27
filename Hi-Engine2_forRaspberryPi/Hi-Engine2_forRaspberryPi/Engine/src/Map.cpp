@@ -18,6 +18,10 @@ void Map::MapInit()
 {
 	lastMap = new std::vector<std::vector<std::string>>(YSIZE, std::vector<std::string>(XSIZE, "  "));
 	currentMap = new std::vector<std::vector<std::string>>(YSIZE, std::vector<std::string>(XSIZE, "  "));
+
+
+	lastColor = new std::vector<std::vector<COLOR>>(YSIZE, std::vector<COLOR>(XSIZE, BLACK));
+	currentColor = new std::vector<std::vector<COLOR>>(YSIZE, std::vector<COLOR>(XSIZE, BLACK));
 }
 
 void Map::Print()
@@ -39,7 +43,13 @@ void Map::CopyCurrentMapANDRemoveCurrentMap()
 	for (auto& col : *currentMap)
 		for	(auto& str : col)
 			str = "  ";
-		
+
+
+	*lastColor = *currentColor;
+
+	for (auto& col : *currentColor)
+		for (auto& cor: col)
+			cor = BLACK;
 }
 
 std::vector<Position> Map::ModifiedMap()
@@ -72,6 +82,23 @@ void Map::SetPartOfMap(Position p, std::string change, Area area)
 		}
 	}
 }
+
+COLOR Map::GetPartOfColor(Position p)
+{
+	return currentColor->at(p.y).at(p.x);
+}
+
+void Map::SetPartOfColor(Position p, COLOR change, Area area)
+{
+	for (int y = p.y; y < area.height + p.y; y++)
+	{
+		for (int x = p.x; x < area.width + p.x; x++)
+		{
+			currentColor->at(y).at(x) = change;
+		}
+	}
+}
+
 
 int Map::GetYSIZE()
 {

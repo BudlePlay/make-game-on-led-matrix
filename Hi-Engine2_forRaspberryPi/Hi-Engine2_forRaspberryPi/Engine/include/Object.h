@@ -2,7 +2,9 @@
 
 #include<iostream>
 
+
 #include "Unit.h"
+#include "../../ProjectSetting.h"
 
 class Object
 {
@@ -22,9 +24,11 @@ protected:
 	FPosition Right = { Speed, 0 };
 	
 public:
+
+	COLOR color;
 	virtual ~Object();
 
-	Object(FPosition p, std::string name, std::string shape, Area Area, std::string Type);
+	Object(FPosition p, std::string name, std::string shape, COLOR color, Area Area, std::string Type);
 
 
 	std::string GetName();
