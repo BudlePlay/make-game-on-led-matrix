@@ -45,14 +45,9 @@ TestScene::~TestScene()
 
 void TestScene::Map_Make()
 {
-	WorldOutliner::AddObject(new Wall(FPosition({0, 0}), "Wall_Top", "бс", Area({X_SIZE, 1}), "Wall"));
-	WorldOutliner::AddObject(new Wall(FPosition({ 0, float(Y_SIZE) - 1 }), "Wall_Bottom", "бс", Area({ X_SIZE, 1 }), "Wall"));
+	WorldOutliner::AddObject(new Wall(FPosition({0, 0}), "Wall_Top", Area({X_SIZE, 1}), "Wall"));
+	WorldOutliner::AddObject(new Wall(FPosition({ 0, float(Y_SIZE) - 1 }), "Wall_Bottom", Area({ X_SIZE, 1 }), "Wall"));
 
-	WorldOutliner::AddObject(new Wall(FPosition({0, 0}), "Wall_Left", "бс", Area({1, Y_SIZE}), "Wall"));
-	WorldOutliner::AddObject(new Wall(FPosition({float(X_SIZE) - 1, 0}), "Wall_Right", "бс", Area({1, Y_SIZE}), "Wall"));	
-}
-
-std::string TestScene::getW()
-{
-	return WorldOutliner::FindObject("Player")->GetShape();
+	WorldOutliner::AddObject(new Wall(FPosition({0, 0}), "Wall_Left", Area({1, Y_SIZE}), "Wall"));
+	WorldOutliner::AddObject(new Wall(FPosition({float(X_SIZE) - 1, 0}), "Wall_Right", Area({1, Y_SIZE}), "Wall"));	
 }

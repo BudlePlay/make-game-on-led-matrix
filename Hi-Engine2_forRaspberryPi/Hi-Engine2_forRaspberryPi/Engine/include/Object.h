@@ -38,9 +38,7 @@ public:
 
 	void SetPosition(FPosition p);
 
-	std::string GetShape();
 
-	void SetShape(std::string shape);
 
 	std::string getType();
 

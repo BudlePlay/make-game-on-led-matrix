@@ -22,5 +22,4 @@ public:
 
 	void Map_Make();
 
-	std::string getW();
 };
