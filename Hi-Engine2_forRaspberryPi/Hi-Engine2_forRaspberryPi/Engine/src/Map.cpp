@@ -16,34 +16,17 @@ Map::Map(int XSIZE, int YSIZE)
 
 void Map::MapInit()
 {
-	lastMap = new std::vector<std::vector<std::string>>(YSIZE, std::vector<std::string>(XSIZE, "  "));
-	currentMap = new std::vector<std::vector<std::string>>(YSIZE, std::vector<std::string>(XSIZE, "  "));
-
-
 	lastColor = new std::vector<std::vector<COLOR>>(YSIZE, std::vector<COLOR>(XSIZE, BLACK));
 	currentColor = new std::vector<std::vector<COLOR>>(YSIZE, std::vector<COLOR>(XSIZE, BLACK));
 }
 
 void Map::Print()
 {
-	for (auto y : *currentMap)
-	{
-		for (auto x : y)
-		{
-			std::cout << x;
-		}
-		std::cout << "\n";
-	}
+	std::cout << "print" << std::endl;
 }
 
 void Map::CopyCurrentMapANDRemoveCurrentMap()
 {
-	*lastMap = *currentMap;
-
-	for (auto& col : *currentMap)
-		for	(auto& str : col)
-			str = "  ";
-
 
 	*lastColor = *currentColor;
 

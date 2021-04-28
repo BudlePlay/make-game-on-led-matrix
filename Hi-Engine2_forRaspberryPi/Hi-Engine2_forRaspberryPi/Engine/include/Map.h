@@ -14,10 +14,6 @@ private:
 	int YSIZE;
 public:
 
-	std::vector<std::vector<std::string>>* lastMap;
-	std::vector<std::vector<std::string>>* currentMap;
-
-
 	std::vector<std::vector<COLOR>>* lastColor;
 	std::vector<std::vector<COLOR>>* currentColor;
 	
@@ -32,7 +28,6 @@ public:
 	void CopyCurrentMapANDRemoveCurrentMap();
 
 	std::vector<Position> ModifiedMap();
-
 
 
 	COLOR GetPartOfColor(Position p);
