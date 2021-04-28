@@ -3,8 +3,8 @@
 #include "../../Engine/include/WorldOutliner.h"
 #include "../include/Wall.h"
 
-Enemy::Enemy(const FPosition& p, const std::string& name, const std::string& shape, const Area& Area,
-             const std::string& Type): Object(p, name, shape, YELLOW, Area, Type)
+Enemy::Enemy(const FPosition& p, const std::string& name, const Area& Area,
+             const std::string& Type): Object(p, name, YELLOW, Area, Type)
 {
 }
 

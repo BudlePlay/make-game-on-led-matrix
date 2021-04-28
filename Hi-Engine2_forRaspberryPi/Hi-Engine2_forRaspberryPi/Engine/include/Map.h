@@ -34,8 +34,6 @@ public:
 	std::vector<Position> ModifiedMap();
 
 
-	std::string GetPartOfMap(Position p);
-	void SetPartOfMap(Position p, std::string change, Area area);
 
 	COLOR GetPartOfColor(Position p);
 	void SetPartOfColor(Position p, COLOR change, Area area);

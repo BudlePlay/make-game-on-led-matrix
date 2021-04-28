@@ -97,7 +97,6 @@ void EngineManager::Print_Map()
 
 	for (Position i : v)
 	{
-		std::string shape = scene->mapPointer->GetPartOfMap({ i.x, i.y });
 		const COLOR color = scene->mapPointer->GetPartOfColor({ i.x, i.y });
 
 		if (i.x < 32 && i.y < 16)

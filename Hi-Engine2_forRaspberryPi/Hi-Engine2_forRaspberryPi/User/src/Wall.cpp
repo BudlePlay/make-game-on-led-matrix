@@ -2,7 +2,7 @@
 
 
 
-Wall::Wall(FPosition p, std::string name, std::string shape, Area area, std::string Type): Object(p, name, shape, TURQUOISE, area, Type)
+Wall::Wall(FPosition p, std::string name, Area area, std::string Type): Object(p, name, TURQUOISE, area, Type)
 {
 }
 

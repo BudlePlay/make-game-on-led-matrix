@@ -10,7 +10,6 @@ class Object
 {
 protected:
 	std::string name;
-	std::string shape;
 	std::string Type;
 	FPosition position{0,0};
 	Area area{0,0};
@@ -28,7 +27,7 @@ public:
 	COLOR color;
 	virtual ~Object();
 
-	Object(FPosition p, std::string name, std::string shape, COLOR color, Area Area, std::string Type);
+	Object(FPosition p, std::string name, COLOR color, Area Area, std::string Type);
 
 
 	std::string GetName();
@@ -50,7 +49,6 @@ public:
 
 	void Translate(FPosition p);
 
-	void Translate(FPosition p, std::string shape);
 
 	void TryWork();
 

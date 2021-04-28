@@ -70,21 +70,6 @@ std::vector<Position> Map::ModifiedMap()
 	return positions;
 }
 
-std::string Map::GetPartOfMap(Position p)
-{
-	return currentMap->at(p.y).at(p.x);
-}
-
-void Map::SetPartOfMap(Position p, std::string change, Area area)
-{
-	for (int y = p.y; y < area.height + p.y; y++)
-	{
-		for (int x = p.x; x < area.width + p.x; x++)
-		{
-			currentMap->at(y).at(x) = change;
-		}
-	}
-}
 
 COLOR Map::GetPartOfColor(Position p)
 {
