@@ -30,18 +30,14 @@ SceneManager::~SceneManager()
 {
 }
 
-void SceneManager::UploadMap(Object* o)
-{
-	mapPointer->SetPartOfMap(PositionTools::FPtoIP(o->GetPosition()), o->GetShape(), o->GetArea());
-}
-
 void SceneManager::UploadMap(std::vector<Object*> obs)
 {
 	for (auto o : obs)
 	{
 		try
 		{
-			mapPointer->SetPartOfMap(PositionTools::FPtoIP(o->GetPosition()), o->GetShape(), o->GetArea());
+			mapPointer->SetPartOfColor(PositionTools::FPtoIP(o->GetPosition()), o->color, o->GetArea());
+
 		}
 		catch (std::exception e)
 		{

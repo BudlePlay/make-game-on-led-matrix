@@ -4,7 +4,7 @@
 class Bullet : public Object
 {
 public:
-	Bullet(const FPosition& p, const std::string& name, const std::string& shape, const Area& Area,
+	Bullet(const FPosition& p, const std::string& name, const COLOR color, const Area& Area,
 	       const std::string& direction, const std::string& Type, const FPosition forward, const float speed, Object* instigator);
 
 	~Bullet() override;

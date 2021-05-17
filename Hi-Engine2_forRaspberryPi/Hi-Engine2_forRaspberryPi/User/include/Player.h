@@ -8,7 +8,7 @@
 class Player : public Object
 {
 public:
-	Player(const FPosition& p, const std::string& name, const std::string& shape, const Area& Area, const std::string& Type);
+	Player(const FPosition& p, const std::string& name, const Area& Area, const std::string& Type);
 
 	void Work() override;
 	

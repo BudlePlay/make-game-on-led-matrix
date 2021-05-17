@@ -5,15 +5,13 @@
 Object::~Object()
 {
 	name.clear();
-	shape.clear();
 	Type.clear();
 }
 
-Object::Object(FPosition p, std::string name, std::string shape, Area Area, std::string Type)
+Object::Object(FPosition p, std::string name, COLOR color, Area Area, std::string Type)
 {
 	this->name = name;
-	this->shape = shape;
-
+	this->color = color;
 	this->position.x = p.x;
 	this->position.y = p.y;
 	this->area.width = Area.width;
@@ -42,18 +40,6 @@ void Object::SetPosition(FPosition p)
 	position = p;
 }
 
-std::string Object::GetShape()
-{
-	return shape;
-}
-
-void Object::SetShape(std::string shape)
-{
-	// if shape size is 1 : add " "
-	this->shape = shape;
-}
-
-
 std::string Object::getType()
 {
 	return Type;
@@ -71,12 +57,7 @@ void Object::Translate(FPosition p)
 	this->position.y += p.y;
 }
 
-void Object::Translate(FPosition p, std::string shape)
-{
-	this->position.x += p.x;
-	this->position.y += p.y;
-	this->shape = shape;
-}
+
 
 void Object::TryWork()
 {

@@ -10,7 +10,7 @@ public:
 	//WorldOutliner worldOutliner;
 	Wall();
 
-	Wall(FPosition p, std::string name, std::string shape, Area area, std::string Type);
+	Wall(FPosition p, std::string name, Area area, std::string Type);
 
 	void Work() // 랜더 안에서 돌아가는 Work
 	;
