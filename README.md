@@ -17,8 +17,8 @@ This repository is tested on Windows10, Visual studio 2019, Raspberry Pi 4.
 
 > We plan to support cmake.
 
-## SW Pull up Setting
-if use joystick or button, need sw pull up Setting in raspberry pi 4.  
+## SW pull up setting
+if use joystick or button, need sw pull up setting in raspberry pi 4.  
 ```sh
 git clone https://github.com/WiringPi/WiringPi.git
 cd WiringPi/
