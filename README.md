@@ -4,7 +4,7 @@ this repository can create a game on led matrix by adding some code.
 
 Please feel free to open an issue or a pull-request if you have any idea to make it better. :)
 
-> If you want a make windows, please see [hi-engine-2](https://github.com/BudlePlay/Hi-Engine2)  
+> If you want a make game in windows, please see [hi-engine-2](https://github.com/BudlePlay/Hi-Engine2)  
 
 
 ## How to use
