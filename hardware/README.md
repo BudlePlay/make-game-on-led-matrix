@@ -1,6 +1,6 @@
 ### Case
 
-![AssembleCase](imgs/AssembleCase.gif)  
+![AssembleCase](/imgs/AssembleCase.gif)  
 
 <img src="/imgs/MatrixCaseFront.jpg" height="400">  
 <img src="/imgs/MatrixCaseBack.jpg" height="400">  
