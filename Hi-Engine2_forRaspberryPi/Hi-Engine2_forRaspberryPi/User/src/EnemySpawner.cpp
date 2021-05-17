@@ -4,8 +4,8 @@
 #include "../include/Enemy.h"
 
 #include <random>
-EnemySpawner::EnemySpawner(const FPosition& p, const std::string& name, const std::string& shape, const Area& Area,
-                           const std::string& Type): Object(p, name, shape, Area, Type), random_int_(10)
+EnemySpawner::EnemySpawner(const FPosition& p, const std::string& name, const Area& Area,
+                           const std::string& Type): Object(p, name, BLACK, Area, Type), random_int_(10)
 {
 }
 
@@ -22,7 +22,7 @@ void EnemySpawner::Work()
 	float y = float(random_int_.roll());
 	if(uptimer_ > spawntime_)
 	{
-		WorldOutliner::AddObject(new Enemy({ x,y}, "Enemy", "Enemy", { 1,1 }, "Character"));
+		WorldOutliner::AddObject(new Enemy({ x,y}, "Enemy", { 1,1 }, "Character"));
 		uptimer_ = 0;
 		
 		enemy_y_++;

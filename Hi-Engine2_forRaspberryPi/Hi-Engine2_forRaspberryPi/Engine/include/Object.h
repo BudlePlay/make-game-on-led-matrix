@@ -2,13 +2,14 @@
 
 #include<iostream>
 
+
 #include "Unit.h"
+#include "../../ProjectSetting.h"
 
 class Object
 {
 protected:
 	std::string name;
-	std::string shape;
 	std::string Type;
 	FPosition position{0,0};
 	Area area{0,0};
@@ -22,9 +23,11 @@ protected:
 	FPosition Right = { Speed, 0 };
 	
 public:
+
+	COLOR color;
 	virtual ~Object();
 
-	Object(FPosition p, std::string name, std::string shape, Area Area, std::string Type);
+	Object(FPosition p, std::string name, COLOR color, Area Area, std::string Type);
 
 
 	std::string GetName();
@@ -35,9 +38,7 @@ public:
 
 	void SetPosition(FPosition p);
 
-	std::string GetShape();
 
-	void SetShape(std::string shape);
 
 	std::string getType();
 
@@ -46,7 +47,6 @@ public:
 
 	void Translate(FPosition p);
 
-	void Translate(FPosition p, std::string shape);
 
 	void TryWork();
 

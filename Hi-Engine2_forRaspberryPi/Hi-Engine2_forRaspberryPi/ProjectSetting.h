@@ -3,6 +3,20 @@
 #include <map>
 #include <string>
 
+
+enum COLOR
+{
+	BLACK = 0,
+	RED,
+	GREEN,
+	YELLOW,
+	BLUE,
+	PURPLE,
+	TURQUOISE,
+	WHITE
+};
+
+
 struct InputSetting
 {
 public:
