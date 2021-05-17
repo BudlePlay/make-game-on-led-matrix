@@ -61,8 +61,12 @@ sudo gpio readall
 - 3d Printer
 - Laser cutting machine
 
-
-
+### Buy list
+- [LED matrix](https://www.devicemart.co.kr/goods/view?no=1360878)  
+- [Joy stick](https://www.devicemart.co.kr/goods/view?no=13152308)
+- [Game switch](https://www.devicemart.co.kr/goods/view?no=1376727)
+- Acrylic sheet 3t
+  
 ## Reference
 [HiEngine2](https://github.com/BudlePlay/Hi-Engine2)
 
