@@ -17,7 +17,18 @@ This repository is tested on Windows10, Visual studio 2019, Raspberry Pi 4.
 
 > We plan to support cmake.
 
-## SW pull up setting
+
+## Electric Circuit
+### joystick, button
+![gpio input](imgs/gpio-input.png)
+### LED matrix 
+![gpio matrix](imgs/gpio-matrix.png)
+
+[LED matrix docs](https://learn.adafruit.com/32x16-32x32-rgb-led-matrix)  
+[Raspberry pi GPIO docs](https://www.raspberrypi.org/documentation/usage/gpio/)  
+
+
+### SW pull up setting
 if use joystick or button, need sw pull up setting in raspberry pi 4.  
 ```sh
 git clone https://github.com/WiringPi/WiringPi.git
