@@ -6,32 +6,19 @@ Please feel free to open an issue or a pull-request if you have any idea to make
 
 > If you want a make windows, please see [hi-engine-2](https://github.com/BudlePlay/Hi-Engine2)  
 
-## Demo
-![Complete](imgs/Complete.gif)  
-<img src="imgs/Complete.jpg" height="400">  
 
-[https://www.youtube.com/watch?v=Fkds48xTplY](https://www.youtube.com/watch?v=Fkds48xTplY)  
-![DemoGame](imgs/DemoGame.gif)  
+## How to use
+This repository is tested on Windows10, Visual studio 2019, Raspberry Pi 4.  
 
+1. download visual studio and install iot and linux plugin.  
+2. open *Hi-Engine2_forRaspberryPi/Hi-Engine2_forRaspberryPi.sln*
+3. connect raspberry pi 
+4. build and run
 
-## Tech
-- C++
-- LED Matrix
-- Raspberry Pi 4
-- Fusion 360
-- 3d Printer
-- Laser cutting machine
-
-## Case
-
-![AssembleCase](imgs/AssembleCase.gif)  
-
-<img src="imgs/MatrixCaseFront.jpg" height="400">  
-<img src="imgs/MatrixCaseBack.jpg" height="400">  
-<img src="imgs/01_Lower.jpg" height="400">  
-<img src="imgs/02_Lower.jpg" height="400">  
+> We plan to support cmake.
 
 ## SW Pull up Setting
+if use joystick or button, need sw pull up Setting in raspberry pi 4.  
 ```sh
 git clone https://github.com/WiringPi/WiringPi.git
 cd WiringPi/
@@ -46,6 +33,33 @@ raspi-gpio set 4 pu
 raspi-gpio set 17 pu 
 sudo gpio readall
 ```
+
+## Demo
+![Complete](imgs/Complete.gif)  
+<img src="imgs/Complete.jpg" height="400">  
+
+[https://www.youtube.com/watch?v=Fkds48xTplY](https://www.youtube.com/watch?v=Fkds48xTplY)  
+![DemoGame](imgs/DemoGame.gif)  
+
+
+### Tech use in the demo
+- C++
+- LED Matrix 
+- Raspberry Pi 4
+- Fusion 360 [[link](hardware/)]
+- 3d Printer
+- Laser cutting machine
+
+### Case
+
+![AssembleCase](imgs/AssembleCase.gif)  
+
+<img src="imgs/MatrixCaseFront.jpg" height="400">  
+<img src="imgs/MatrixCaseBack.jpg" height="400">  
+<img src="imgs/01_Lower.jpg" height="400">  
+<img src="imgs/02_Lower.jpg" height="400">  
+
+
 
 ## Reference
 [HiEngine2](https://github.com/BudlePlay/Hi-Engine2)
