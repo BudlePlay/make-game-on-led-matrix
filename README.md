@@ -20,9 +20,10 @@ This repository is tested on Windows10, Visual studio 2019, Raspberry Pi 4.
 
 ## Electric Circuit
 ### joystick, button
-<img src="imgs/gpio-input.png" height="400">  
+<img src="imgs/gpio-input.png" height="100">  
+
 ### LED matrix 
-<img src="imgs/gpio-matrix.png" height="400">   
+<img src="imgs/gpio-matrix.png" height="100">   
 
 [LED matrix docs](https://learn.adafruit.com/32x16-32x32-rgb-led-matrix)  
 [Raspberry pi GPIO docs](https://www.raspberrypi.org/documentation/usage/gpio/)  
