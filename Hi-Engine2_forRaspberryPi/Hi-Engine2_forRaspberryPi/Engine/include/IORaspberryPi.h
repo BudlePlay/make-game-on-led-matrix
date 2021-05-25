@@ -21,6 +21,8 @@
 #define JOY_LEFT 27
 #define JOY_RIGHT 22
 
+#define BTN_CNT 4
+
 #define BTN_0 2
 #define BTN_1 3
 #define BTN_2 4
@@ -28,11 +30,13 @@
 
 #include "../../ProjectSetting.h"
 
+
 class IORaspberryPi
 {
 public:
+	inline const static int BTN_PIN[BTN_CNT] = { BTN_0, BTN_1, BTN_2, BTN_3 };
 
-
+	
     unsigned char screen[16][32];
 
     IORaspberryPi();

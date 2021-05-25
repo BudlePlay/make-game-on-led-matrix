@@ -38,8 +38,14 @@ void Input::operator()()
 		}
 	}
 
-	int btn = IORaspberryPi::get_btn(0);
-	if (btn == 1 && flip == true)
+	int arr[BTN_CNT] = {0 };
+
+	for (int i = 0; i < BTN_CNT; i++)
+	{
+		arr[i] = IORaspberryPi::get_btn(i);
+	}
+	
+	if (arr[0] == 1 && flip == true)
 	{
 		const auto input_setting = InputSetting::Action_map.find(10);
 
@@ -55,7 +61,7 @@ void Input::operator()()
 		}
 		flip = false;
 	}
-	else if(btn == 0)
+	else if(arr[0] == 0)
 	{
 		flip = true;
 	}
