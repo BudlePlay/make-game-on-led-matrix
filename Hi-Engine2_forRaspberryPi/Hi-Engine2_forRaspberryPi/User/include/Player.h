@@ -27,7 +27,10 @@ private:
 	void jump(int i);
 
 	void attack();
-
+	void print_t1();
+	void print_t2();
+	void print_t3();
+	
 	void up();
 	void down();
 	void left();

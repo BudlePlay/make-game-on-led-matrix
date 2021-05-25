@@ -27,6 +27,7 @@
 #define BTN_1 3
 #define BTN_2 4
 #define BTN_3 17
+#define BTN_CNT 4
 
 #include "../../ProjectSetting.h"
 

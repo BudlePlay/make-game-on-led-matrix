@@ -7,7 +7,10 @@
 
 Input::Input()
 {
-	flip = true;
+	for (bool& element : flips)
+	{
+		element = true;
+	}
 }
 
 void Input::BindAction(std::string name, EInputEvent KeyEvent, Object* object, const std::function<void()>& func)
@@ -38,32 +41,33 @@ void Input::operator()()
 		}
 	}
 
-	int arr[BTN_CNT] = {0 };
+	int arr[BTN_CNT] = { };
 
 	for (int i = 0; i < BTN_CNT; i++)
 	{
 		arr[i] = IORaspberryPi::get_btn(i);
-	}
-	
-	if (arr[0] == 1 && flip == true)
-	{
-		const auto input_setting = InputSetting::Action_map.find(10);
 
-		if (input_setting != InputSetting::Action_map.end())
+
+		if (arr[i] == 1 && flips[i] == true)
 		{
-			const auto action_name_setting = input_setting->second;
-			const auto input = input_map_.find(action_name_setting);
+			const auto input_setting = InputSetting::Action_map.find(i+10);
 
-			if (input != input_map_.end())
+			if (input_setting != InputSetting::Action_map.end())
 			{
-				input->second();
+				const auto action_name_setting = input_setting->second;
+				const auto input = input_map_.find(action_name_setting);
+
+				if (input != input_map_.end())
+				{
+					input->second();
+				}
 			}
+			flips[i] = false;
 		}
-		flip = false;
-	}
-	else if(arr[0] == 0)
-	{
-		flip = true;
+		else if (arr[i] == 0)
+		{
+			flips[i] = true;
+		}
 	}
 	
 }

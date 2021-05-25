@@ -2,6 +2,8 @@
 #include <functional>
 #include <map>
 
+
+#include "IORaspberryPi.h"
 #include "Object.h"
 
 enum EInputEvent
@@ -25,7 +27,7 @@ public:
 	std::map<std::string, std::function<void()>> input_map_;
 private:
 
-	bool flip;
+	bool flips[BTN_CNT];
 	Object* object_;
 	std::function<void()> func_;
 	

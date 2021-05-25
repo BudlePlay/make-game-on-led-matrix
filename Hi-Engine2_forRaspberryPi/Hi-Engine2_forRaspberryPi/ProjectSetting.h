@@ -31,6 +31,7 @@ public:
 		m[10] = "Attack";
 		m[11] = "Hide";
 		m[12] = "Menu";
+		m[13] = "Test";
 		return m;
 	}
 
