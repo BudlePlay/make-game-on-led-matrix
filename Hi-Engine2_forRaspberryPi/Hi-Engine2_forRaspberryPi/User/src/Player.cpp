@@ -25,7 +25,16 @@ Player::Player(const FPosition& p, const std::string& name, const Area& Area, co
 	input_->BindAction("Attack", EInputEvent::IE_Pressed, this, [=]() {
 		this->attack();
 	});
-
+	input_->BindAction("Hide", EInputEvent::IE_Pressed, this, [=]() {
+		this->print_t1();
+	});
+	input_->BindAction("Menu", EInputEvent::IE_Pressed, this, [=]() {
+		this->print_t2();
+	});
+	input_->BindAction("Test",
+		EInputEvent::IE_Pressed, this, [=]() {
+		this->print_t3();
+	});
 	input_->BindAction("Up", EInputEvent::IE_Pressed, this, [=]() {
 		this->up();
 	});
@@ -119,6 +128,21 @@ void Player::attack()
 		hp_ = 0;
 	}
 	hp_bar_->SetArea({ hp_,1 });
+}
+
+void Player::print_t1()
+{
+	cout << "print_t1" << endl;
+}
+
+void Player::print_t2()
+{
+	cout << "print_t2" << endl;
+}
+
+void Player::print_t3()
+{
+	cout << "print_t3" << endl;
 }
 
 void Player::up()

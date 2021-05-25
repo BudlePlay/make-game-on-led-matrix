@@ -29,6 +29,9 @@ public:
 		m[2] = "Left";
 		m[3] = "Right";
 		m[10] = "Attack";
+		m[11] = "Hide";
+		m[12] = "Menu";
+		m[13] = "Test";
 		return m;
 	}
 
